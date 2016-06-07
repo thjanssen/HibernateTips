@@ -18,6 +18,10 @@
 
 			<property name="javax.persistence.schema-generation.database.action" value="drop-and-create" />
 			<property name="javax.persistence.sql-load-script-source" value="data.sql"/>
+			
+			<!--  configure caching -->
+      		<property name="hibernate.cache.use_query_cache" value="true"/>	
+			<property name="hibernate.cache.region.factory_class" value="org.hibernate.cache.ehcache.EhCacheRegionFactory"/>
 		</properties>
 	</persistence-unit>
 </persistence>

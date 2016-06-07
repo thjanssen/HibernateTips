@@ -42,7 +42,7 @@
 	<artifactId>LogSQLStatements</artifactId>
 	<parent>
 		<groupId>org.thoughts.on.java.recipes</groupId>
-		<artifactId>HibernateRecipes</artifactId>
+		<artifactId>HibernateTips</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 		<relativePath>..</relativePath>
 	</parent>
