@@ -75,5 +75,6 @@
 	<modules>
 		<module>LogSQLStatements</module>
 		<module>QueryCache</module>
+		<module>DatabaseViews</module>
 	</modules>
 </project>
