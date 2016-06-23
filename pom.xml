@@ -76,5 +76,6 @@
 		<module>LogSQLStatements</module>
 		<module>QueryCache</module>
 		<module>DatabaseViews</module>
+		<module>JoinFetch</module>
 	</modules>
 </project>
