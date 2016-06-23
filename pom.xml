@@ -77,5 +77,6 @@
 		<module>QueryCache</module>
 		<module>DatabaseViews</module>
 		<module>JoinFetch</module>
+		<module>CustomSequence</module>
 	</modules>
 </project>
