@@ -79,5 +79,6 @@
 		<module>JoinFetch</module>
 		<module>CustomSequence</module>
 		<module>OrderRelationships</module>
+		<module>MapNativeQueryToEntity</module>
 	</modules>
 </project>
