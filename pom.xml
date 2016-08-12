@@ -32,6 +32,11 @@
 				<version>${hibernate.version}</version>
 			</dependency>
 			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-jpamodelgen</artifactId>
+				<version>${hibernate.version}</version>
+			</dependency>
+			<dependency>
 				<groupId>org.hibernate.javax.persistence</groupId>
 				<artifactId>hibernate-jpa-2.1-api</artifactId>
 				<version>1.0.0.Final</version>
@@ -80,5 +85,7 @@
 		<module>CustomSequence</module>
 		<module>OrderRelationships</module>
 		<module>MapNativeQueryToEntity</module>
+		<module>Treat</module>
+		<module>CriteriaTuples</module>
 	</modules>
 </project>
