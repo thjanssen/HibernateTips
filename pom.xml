@@ -11,7 +11,7 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<hibernate.version>5.1.0.Final</hibernate.version>
+		<hibernate.version>5.2.1.Final</hibernate.version>
 	</properties>
 
 	<dependencyManagement>
@@ -87,5 +87,10 @@
 		<module>MapNativeQueryToEntity</module>
 		<module>Treat</module>
 		<module>CriteriaTuples</module>
+		<module>Formula</module>
+		<module>QueryTimeout</module>
+		<module>CheckSQLStatementCount</module>
+		<module>AccessHibernateApi</module>
+		<module>TransientAttributes</module>
 	</modules>
 </project>

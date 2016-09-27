@@ -3,6 +3,7 @@ package org.thoughts.on.java.model;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 
 import org.apache.log4j.Logger;
 import org.junit.After;
@@ -32,8 +33,9 @@ public class TestLogging {
 		EntityManager em = emf.createEntityManager();
 		em.getTransaction().begin();
 
-		em.createQuery("SELECT a FROM Author a WHERE a.id = 1", Author.class)
-				.getSingleResult();
+		Query q = em.createQuery("SELECT a FROM Author a WHERE a.id = :id", Author.class);
+		q.setParameter("id", 1L);
+		q.getSingleResult();
 
 		em.getTransaction().commit();
 		em.close();

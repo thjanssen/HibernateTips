@@ -6,12 +6,12 @@ import javax.persistence.Persistence;
 
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
-import org.hibernate.query.Query;
+import org.hibernate.SessionFactory;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TestQueryCache {
+public class TestAccessHibernateApi {
 
 	Logger log = Logger.getLogger(this.getClass().getName());
 
@@ -28,20 +28,27 @@ public class TestQueryCache {
 	}
 
 	@Test
-	public void selectAuthors() {
-		log.info("... selectAuthors ...");
+	public void accessHibernateSession() {
+		log.info("... accessHibernateSession ...");
 
 		EntityManager em = emf.createEntityManager();
 		em.getTransaction().begin();
 
-		Session s = em.unwrap(Session.class);
-		Query<Author> q = s.createQuery("SELECT a FROM Author a WHERE id = :id", Author.class);
-		q.setParameter("id", 1L);
-		q.setCacheable(true);
-		log.info(q.getSingleResult());
+		Session session = em.unwrap(Session.class);
 		
-		log.info(q.getSingleResult());
+		em.getTransaction().commit();
+		em.close();
+	}
+	
+	@Test
+	public void accessHibernateSessionFactory() {
+		log.info("... accessHibernateSessionFactory ...");
 
+		EntityManager em = emf.createEntityManager();
+		em.getTransaction().begin();
+
+		SessionFactory sessionFactory = em.getEntityManagerFactory().unwrap(SessionFactory.class);
+		
 		em.getTransaction().commit();
 		em.close();
 	}
