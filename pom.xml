@@ -92,5 +92,7 @@
 		<module>CheckSQLStatementCount</module>
 		<module>AccessHibernateApi</module>
 		<module>TransientAttributes</module>
+		<module>QueryPagination</module>
+		<module>MapGeneratedColumns</module>
 	</modules>
 </project>

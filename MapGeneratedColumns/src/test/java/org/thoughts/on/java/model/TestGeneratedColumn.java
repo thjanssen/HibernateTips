@@ -1,6 +1,6 @@
 package org.thoughts.on.java.model;
 
-import java.util.List;
+import java.time.LocalDateTime;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -8,10 +8,11 @@ import javax.persistence.Persistence;
 
 import org.apache.log4j.Logger;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TestViewEntity {
+public class TestGeneratedColumn {
 
 	Logger log = Logger.getLogger(this.getClass().getName());
 
@@ -28,33 +29,21 @@ public class TestViewEntity {
 	}
 
 	@Test
-	public void selectFromView() {
-		log.info("... selectFromView ...");
+	public void createAuthor() {
+		log.info("... createAuthor ...");
 
 		EntityManager em = emf.createEntityManager();
 		em.getTransaction().begin();
 
-		List<BookView> bvs = em.createQuery("SELECT v FROM BookView v", BookView.class)
-				.getResultList();
+		Author a = new Author();
+		a.setFirstName("Firstname");
+		a.setLastName("Lastname");
+		em.persist(a);
+		em.flush();
+		a.setFirstName("Changed Firstname");
+		em.flush();
+		Assert.assertNotNull(a.getLastUpdate());
 
-		for (BookView bv : bvs) {
-			log.info(bv.getTitle() + " was written by "+bv.getAuthors());
-		}
-		
-		em.getTransaction().commit();
-		em.close();
-	}
-	
-	@Test
-	public void updateView() {
-		log.info("... updateView ...");
-
-		EntityManager em = emf.createEntityManager();
-		em.getTransaction().begin();
-
-		BookView bv = em.find(BookView.class, 1L);
-		bv.setTitle("updated");
-		
 		em.getTransaction().commit();
 		em.close();
 	}
