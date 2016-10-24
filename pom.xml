@@ -94,5 +94,6 @@
 		<module>TransientAttributes</module>
 		<module>QueryPagination</module>
 		<module>MapGeneratedColumns</module>
+		<module>DefineTableAndSchemaName</module>
 	</modules>
 </project>
