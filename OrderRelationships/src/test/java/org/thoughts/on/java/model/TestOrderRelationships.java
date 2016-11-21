@@ -38,6 +38,9 @@ public class TestOrderRelationships {
 		Assert.assertEquals("Bauer", authors[0].getLastName());
 		Assert.assertEquals("Gregory", authors[1].getLastName());
 		Assert.assertEquals("King", authors[2].getLastName());
+		for (Author a : authors) {
+			log.info(a.getLastName());
+		}
 		
 		em.getTransaction().commit();
 		em.close();
@@ -55,6 +58,9 @@ public class TestOrderRelationships {
 		Assert.assertEquals("Bauer", authors[0].getLastName());
 		Assert.assertEquals("Gregory", authors[1].getLastName());
 		Assert.assertEquals("King", authors[2].getLastName());
+		for (Author a : authors) {
+			log.info(a.getLastName());
+		}
 		
 		em.getTransaction().commit();
 		em.close();
