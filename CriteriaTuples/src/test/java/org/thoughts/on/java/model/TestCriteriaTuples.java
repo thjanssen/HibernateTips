@@ -41,8 +41,8 @@ public class TestCriteriaTuples {
 		CriteriaBuilder cb = em.getCriteriaBuilder();
 		CriteriaQuery<Tuple> q = cb.createTupleQuery();
 		Root<Author> author = q.from(Author.class);
-		q.multiselect(author.get(Author_.firstName).alias("firstName"), author
-				.get(Author_.lastName).alias("lastName"));
+		q.multiselect(author.get(Author_.firstName).alias("firstName"), 
+						author.get(Author_.lastName).alias("lastName"));
 
 		List<Tuple> authorNames = em.createQuery(q).getResultList();
 
