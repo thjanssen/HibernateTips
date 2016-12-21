@@ -9,7 +9,6 @@ import javax.persistence.Persistence;
 
 import org.apache.log4j.Logger;
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -29,6 +28,7 @@ public class TestQueryTimeout {
 		emf.close();
 	}
 
+	@SuppressWarnings("unused")
 	@Test
 	public void queryTimeoutOnQuery() {
 		log.info("... queryTimeoutOnQuery ...");
