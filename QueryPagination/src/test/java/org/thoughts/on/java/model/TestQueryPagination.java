@@ -1,6 +1,5 @@
 package org.thoughts.on.java.model;
 
-import java.util.HashMap;
 import java.util.List;
 
 import javax.persistence.EntityManager;

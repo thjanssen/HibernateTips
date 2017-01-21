@@ -62,7 +62,9 @@ public class TestStatistics {
 		SessionFactory sessionFactory = emf.unwrap(SessionFactory.class);
 		Statistics stats = sessionFactory.getStatistics();
 		long queryCount = stats.getQueryExecutionCount();
+		long collectionFetchCount = stats.getCollectionFetchCount();
 		log.info("QueryCount: "+queryCount);
+		log.info("CollectionFetchCount: "+collectionFetchCount);
 		
 		em.getTransaction().commit();
 		em.close();

@@ -12,18 +12,21 @@ import javax.persistence.Id;
 import javax.persistence.Transient;
 import javax.persistence.Version;
 
-import org.hibernate.annotations.Formula;
+import org.apache.log4j.Logger;
 
 @Entity
 public class Author implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
+	@Transient
+	Logger log = Logger.getLogger(this.getClass().getName());
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id", updatable = false, nullable = false)
 	private Long id;
-	
+
 	@Version
 	@Column(name = "version")
 	private int version;
@@ -33,10 +36,10 @@ public class Author implements Serializable {
 
 	@Column
 	private String lastName;
-	
+
 	@Column
 	private LocalDate dateOfBirth;
-	
+
 	@Transient
 	private Integer age;
 
@@ -107,11 +110,11 @@ public class Author implements Serializable {
 
 	public int getAge() {
 		if (this.age == null) {
+			log.info("Calculate age");
 			this.age = Period.between(dateOfBirth, LocalDate.now()).getYears();
 		}
-		
+
 		return age;
-//		return Period.between(dateOfBirth, LocalDate.now()).getYears();
 	}
 
 	@Override

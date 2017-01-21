@@ -27,6 +27,7 @@ public class TestTreat {
 		emf.close();
 	}
 
+	@SuppressWarnings("unchecked")
 	@Test
 	public void testTreat() {
 		log.info("... testTreat ...");

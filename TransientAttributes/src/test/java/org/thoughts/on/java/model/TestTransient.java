@@ -3,6 +3,7 @@ package org.thoughts.on.java.model;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Transient;
 
 import org.apache.log4j.Logger;
 import org.junit.After;

@@ -27,6 +27,7 @@ public class TestAccessHibernateApi {
 		emf.close();
 	}
 
+	@SuppressWarnings("unused")
 	@Test
 	public void accessHibernateSession() {
 		log.info("... accessHibernateSession ...");
@@ -40,6 +41,7 @@ public class TestAccessHibernateApi {
 		em.close();
 	}
 	
+	@SuppressWarnings("unused")
 	@Test
 	public void accessHibernateSessionFactory() {
 		log.info("... accessHibernateSessionFactory ...");

@@ -87,6 +87,7 @@
 		<module>MapNativeQueryToEntity</module>
 		<module>Treat</module>
 		<module>CriteriaTuples</module>
+		<module>CriteriaUpdate</module>
 		<module>Formula</module>
 		<module>QueryTimeout</module>
 		<module>CheckSQLStatementCount</module>
@@ -95,5 +96,14 @@
 		<module>QueryPagination</module>
 		<module>MapGeneratedColumns</module>
 		<module>DefineTableAndSchemaName</module>
+		<module>MapNativeQueryToPojo</module>
+		<module>CriteriaConstructor</module>
+		<module>MapOptionalAssociations</module>
+		<module>PrePersistLifecycleEvent</module>
+		<module>CascadePersist</module>
+		<module>CommentSQLStatements</module>
+		<module>EntityGraph</module>
+		<module>StoredProcedureQuery</module>
+		<module>PrimaryKeyIdentityStrategy</module>
 	</modules>
 </project>
