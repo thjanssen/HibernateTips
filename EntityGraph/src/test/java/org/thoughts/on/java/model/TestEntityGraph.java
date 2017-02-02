@@ -27,6 +27,7 @@ public class TestEntityGraph {
 		emf.close();
 	}
 
+	@SuppressWarnings("unchecked")
 	@Test
 	public void selectWithEntityGraph() {
 		log.info("... selectWithEntityGraph ...");

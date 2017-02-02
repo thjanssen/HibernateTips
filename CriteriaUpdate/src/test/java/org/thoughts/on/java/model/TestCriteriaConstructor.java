@@ -7,7 +7,6 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.CriteriaUpdate;
 import javax.persistence.criteria.Root;
 
@@ -56,6 +55,7 @@ public class TestCriteriaConstructor {
 	}
 	
 	private void logBookPrices(EntityManager em) {
+		@SuppressWarnings("unchecked")
 		List<Object[]> books = em.createQuery("SELECT b.title, b.price FROM Book b").getResultList();
 		for (Object[] b : books) {
 			log.info(b[0] + ": " + b[1]);

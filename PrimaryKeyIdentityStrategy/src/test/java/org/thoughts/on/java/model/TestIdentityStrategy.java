@@ -1,15 +1,8 @@
 package org.thoughts.on.java.model;
 
-import java.util.List;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.persistence.Query;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.CriteriaUpdate;
-import javax.persistence.criteria.Root;
 
 import org.apache.log4j.Logger;
 import org.junit.After;
@@ -51,12 +44,5 @@ public class TestIdentityStrategy {
 		
 		em.getTransaction().commit();
 		em.close();
-	}
-	
-	private void logBookPrices(EntityManager em) {
-		List<Object[]> books = em.createQuery("SELECT b.title, b.price FROM Book b").getResultList();
-		for (Object[] b : books) {
-			log.info(b[0] + ": " + b[1]);
-		}
 	}
 }

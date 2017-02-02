@@ -26,6 +26,7 @@ public class Author implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id", updatable = false, nullable = false)
 	private Long id;
+	
 	@Version
 	@Column(name = "version")
 	private int version;

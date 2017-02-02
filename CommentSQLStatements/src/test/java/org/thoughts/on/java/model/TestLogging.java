@@ -41,7 +41,7 @@ public class TestLogging {
 		TypedQuery<Author> q = em.createQuery("SELECT a FROM Author a WHERE a.id = :id", Author.class);
 		q.setParameter("id", 1L);
 		q.setHint("org.hibernate.comment", "This is my comment");
-		Author a = q.getSingleResult();
+		q.getSingleResult();
 
 		em.getTransaction().commit();
 		em.close();
