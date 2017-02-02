@@ -105,5 +105,6 @@
 		<module>EntityGraph</module>
 		<module>StoredProcedureQuery</module>
 		<module>PrimaryKeyIdentityStrategy</module>
+		<module>MapEnumerations</module>
 	</modules>
 </project>
