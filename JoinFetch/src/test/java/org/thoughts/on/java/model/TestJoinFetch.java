@@ -5,6 +5,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import org.apache.log4j.Logger;
+import org.hibernate.LazyInitializationException;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -25,7 +26,7 @@ public class TestJoinFetch {
 		emf.close();
 	}
 
-	@Test
+	@Test(expected = LazyInitializationException.class)
 	public void selectFromWithoutJoinFetch() {
 		log.info("... selectFromWithoutJoinFetch ...");
 
