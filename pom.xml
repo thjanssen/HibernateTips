@@ -129,5 +129,7 @@
 		<module>StoredProcedureQuery</module>
 		<module>PrimaryKeyIdentityStrategy</module>
 		<module>MapEnumerations</module>
+		<module>CriteriaCustomFunction</module>
+		<module>JPQLCustomFunction</module>
 	</modules>
 </project>
