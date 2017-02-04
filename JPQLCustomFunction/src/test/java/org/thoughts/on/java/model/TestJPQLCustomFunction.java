@@ -36,7 +36,11 @@ public class TestJPQLCustomFunction {
 		em.getTransaction().begin();
 
 		
-		TypedQuery<Book> q = em.createQuery("SELECT b FROM Book b WHERE :double2 > function('calculate', b.price, :double1)", Book.class);
+		TypedQuery<Book> q = em.createQuery(
+			    "SELECT b "
+			    + "FROM Book b "
+			    + "WHERE :double2 > function('calculate', b.price, :double1)"
+			    , Book.class);
 		q.setParameter("double1", 10.0D);
 		q.setParameter("double2", 40.0D);
 		List<Book> books = q.getResultList();
