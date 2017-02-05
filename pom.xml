@@ -133,5 +133,6 @@
 		<module>JPQLCustomFunction</module>
 		<module>CriteriaDelete</module>
 		<module>CriteriaQuery</module>
+		<module>JPAMetamodel</module>
 	</modules>
 </project>
