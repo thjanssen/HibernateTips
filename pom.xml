@@ -134,5 +134,6 @@
 		<module>CriteriaDelete</module>
 		<module>CriteriaQuery</module>
 		<module>JPAMetamodel</module>
+		<module>JPQLDelete</module>
 	</modules>
 </project>
