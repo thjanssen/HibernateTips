@@ -1,0 +1,11 @@
+INSERT INTO author (id, firstname, lastname, version) VALUES (1, 'Joshua', 'Bloch', 0);
+INSERT INTO author (id, firstname, lastname, version) VALUES (2, 'Gavin', 'King', 0);
+INSERT INTO author (id, firstname, lastname, version) VALUES (3, 'Christian', 'Bauer', 0);
+INSERT INTO author (id, firstname, lastname, version) VALUES (4, 'Gary', 'Gregory', 0);
+INSERT INTO author (id, firstname, lastname, version) VALUES (5, 'Raoul-Gabriel', 'Urma', 0);
+INSERT INTO author (id, firstname, lastname, version) VALUES (6, 'Mario', 'Fusco', 0);
+INSERT INTO author (id, firstname, lastname, version) VALUES (7, 'Alan', 'Mycroft', 0);
+INSERT INTO author (id, firstname, lastname, version) VALUES (8, 'Andrew Lee', 'Rubinger', 0);
+INSERT INTO author (id, firstname, lastname, version) VALUES (9, 'Aslak', 'Knutsen', 0);
+INSERT INTO author (id, firstname, lastname, version) VALUES (10, 'Bill', 'Burke', 0);
+INSERT INTO author (id, firstname, lastname, version) VALUES (11, 'Scott', 'Oaks', 0);
