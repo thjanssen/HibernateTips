@@ -1,6 +1,5 @@
 package org.thoughts.on.java.model;
 
-import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.Period;
 
