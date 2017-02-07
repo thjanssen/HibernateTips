@@ -15,7 +15,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TestCriteriaConstructor {
+public class TestCriteriaUpdate {
 
 	Logger log = Logger.getLogger(this.getClass().getName());
 

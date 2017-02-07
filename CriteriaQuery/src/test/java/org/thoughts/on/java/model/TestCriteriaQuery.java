@@ -18,7 +18,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TestCriteriaDelete {
+public class TestCriteriaQuery {
 
 	Logger log = Logger.getLogger(this.getClass().getName());
 

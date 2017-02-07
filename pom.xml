@@ -125,7 +125,6 @@
 		<module>PrePersistLifecycleEvent</module>
 		<module>CascadePersist</module>
 		<module>CommentSQLStatements</module>
-		<module>EntityGraph</module>
 		<module>StoredProcedureQuery</module>
 		<module>PrimaryKeyIdentityStrategy</module>
 		<module>MapEnumerations</module>

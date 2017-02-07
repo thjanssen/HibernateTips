@@ -1,6 +1,5 @@
 package org.thoughts.on.java.model;
 
-import java.io.Serializable;
 import java.util.Date;
 import java.util.Optional;
 
@@ -16,22 +15,18 @@ import javax.persistence.TemporalType;
 import javax.persistence.Version;
 
 @Entity
-public class Book implements Serializable {
-
-	private static final long serialVersionUID = 1L;
+public class Book {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id", updatable = false, nullable = false)
 	private Long id;
+
 	@Version
-	@Column(name = "version")
 	private int version;
 
-	@Column
 	private String title;
 
-	@Column
 	@Temporal(TemporalType.DATE)
 	private Date publishingDate;
 
@@ -43,18 +38,34 @@ public class Book implements Serializable {
 		return this.id;
 	}
 
-	public void setId(final Long id) {
-		this.id = id;
-	}
-
 	public int getVersion() {
 		return this.version;
 	}
 
-	public void setVersion(final int version) {
-		this.version = version;
+	public String getTitle() {
+		return title;
 	}
 
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public Date getPublishingDate() {
+		return publishingDate;
+	}
+
+	public void setPublishingDate(Date publishingDate) {
+		this.publishingDate = publishingDate;
+	}
+
+	public Optional<Publisher> getPublisher() {
+		return Optional.ofNullable(this.publisher);
+	}
+
+	public void setPublisher(final Publisher publisher) {
+		this.publisher = publisher;
+	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj) {
@@ -74,26 +85,7 @@ public class Book implements Serializable {
 
 	@Override
 	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		return result;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public Date getPublishingDate() {
-		return publishingDate;
-	}
-
-	public void setPublishingDate(Date publishingDate) {
-		this.publishingDate = publishingDate;
+		return 31;
 	}
 
 	@Override
@@ -102,13 +94,5 @@ public class Book implements Serializable {
 		if (title != null && !title.trim().isEmpty())
 			result += "title: " + title;
 		return result;
-	}
-
-	public Optional<Publisher> getPublisher() {
-		return Optional.ofNullable(this.publisher);
-	}
-
-	public void setPublisher(final Publisher publisher) {
-		this.publisher = publisher;
 	}
 }

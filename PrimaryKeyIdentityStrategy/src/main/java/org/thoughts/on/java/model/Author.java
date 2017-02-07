@@ -1,8 +1,7 @@
 package org.thoughts.on.java.model;
 
-import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,42 +12,53 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Version;
 
 @Entity
-public class Author implements Serializable {
-
-	private static final long serialVersionUID = 1L;
+public class Author {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id", updatable = false, nullable = false)
 	private Long id;
 	
 	@Version
-	@Column(name = "version")
 	private int version;
 
-	@Column
 	private String firstName;
 
-	@Column
 	private String lastName;
 
 	@ManyToMany(mappedBy="authors")
-	private Set<Book> books = new HashSet<Book>();
+	private List<Book> books = new ArrayList<Book>();
 
 	public Long getId() {
 		return this.id;
-	}
-
-	public void setId(final Long id) {
-		this.id = id;
 	}
 
 	public int getVersion() {
 		return this.version;
 	}
 
-	public void setVersion(final int version) {
-		this.version = version;
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public List<Book> getBooks() {
+		return this.books;
+	}
+
+	public void setBooks(final List<Book> books) {
+		this.books = books;
 	}
 
 	@Override
@@ -70,28 +80,9 @@ public class Author implements Serializable {
 
 	@Override
 	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		return result;
+		return 31;
 	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
+	
 	@Override
 	public String toString() {
 		String result = getClass().getSimpleName() + " ";
@@ -100,13 +91,5 @@ public class Author implements Serializable {
 		if (lastName != null && !lastName.trim().isEmpty())
 			result += ", lastName: " + lastName;
 		return result;
-	}
-
-	public Set<Book> getBooks() {
-		return this.books;
-	}
-
-	public void setBooks(final Set<Book> books) {
-		this.books = books;
 	}
 }

@@ -5,8 +5,6 @@ import javax.persistence.Entity;
 @Entity(name = "Book")
 public class Book extends Publication {
 
-	private static final long serialVersionUID = 7599585067389345376L;
-
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj) {

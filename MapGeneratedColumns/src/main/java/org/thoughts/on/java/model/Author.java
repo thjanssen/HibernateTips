@@ -1,6 +1,5 @@
 package org.thoughts.on.java.model;
 
-import java.io.Serializable;
 import java.time.LocalDateTime;
 
 import javax.persistence.Column;
@@ -14,9 +13,7 @@ import org.hibernate.annotations.Generated;
 import org.hibernate.annotations.GenerationTime;
 
 @Entity
-public class Author implements Serializable {
-
-	private static final long serialVersionUID = 1L;
+public class Author {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -26,51 +23,19 @@ public class Author implements Serializable {
 	@Version
 	private int version;
 
-	@Column
 	private String firstName;
 
-	@Column
 	private String lastName;
 	
-	@Column
 	@Generated(GenerationTime.ALWAYS)
 	private LocalDateTime lastUpdate;
 
 	public Long getId() {
 		return this.id;
 	}
-
-	public void setId(final Long id) {
-		this.id = id;
-	}
-
+	
 	public int getVersion() {
 		return this.version;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) {
-			return true;
-		}
-		if (!(obj instanceof Author)) {
-			return false;
-		}
-		Author other = (Author) obj;
-		if (id != null) {
-			if (!id.equals(other.id)) {
-				return false;
-			}
-		}
-		return true;
-	}
-
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		return result;
 	}
 
 	public String getFirstName() {
@@ -97,6 +62,28 @@ public class Author implements Serializable {
 		this.lastUpdate = lastUpdate;
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (!(obj instanceof Author)) {
+			return false;
+		}
+		Author other = (Author) obj;
+		if (id != null) {
+			if (!id.equals(other.id)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	@Override
+	public int hashCode() {
+		return 31;
+	}
+	
 	@Override
 	public String toString() {
 		String result = getClass().getSimpleName() + " ";

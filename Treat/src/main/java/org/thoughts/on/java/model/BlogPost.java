@@ -5,6 +5,20 @@ import javax.persistence.Entity;
 @Entity(name = "BlogPost")
 public class BlogPost extends Publication {
 
-	private static final long serialVersionUID = 5009236084555565690L;
-
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (!(obj instanceof BlogPost)) {
+			return false;
+		}
+		BlogPost other = (BlogPost) obj;
+		if (id != null) {
+			if (!id.equals(other.id)) {
+				return false;
+			}
+		}
+		return true;
+	}
 }

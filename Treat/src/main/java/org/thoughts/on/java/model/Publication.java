@@ -1,6 +1,5 @@
 package org.thoughts.on.java.model;
 
-import java.io.Serializable;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -21,9 +20,7 @@ import javax.persistence.Version;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-public class Publication implements Serializable {
-
-	private static final long serialVersionUID = 1L;
+public class Publication {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -34,23 +31,17 @@ public class Publication implements Serializable {
 	protected String title;	
 	
 	@Version
-	@Column(name = "version")
 	private int version;
 	
 	@ManyToMany
 	@JoinTable(name = "PublicationAuthor", joinColumns = { @JoinColumn(name = "publicationId", referencedColumnName = "id") }, inverseJoinColumns = { @JoinColumn(name = "authorId", referencedColumnName = "id") })
 	private Set<Author> authors = new HashSet<Author>();
 	
-	@Column
 	@Temporal(TemporalType.DATE)
 	private Date publishingDate;
 	
 	public Long getId() {
 		return this.id;
-	}
-
-	public void setId(final Long id) {
-		this.id = id;
 	}
 	
 	public String getTitle() {
@@ -63,10 +54,6 @@ public class Publication implements Serializable {
 
 	public int getVersion() {
 		return this.version;
-	}
-
-	public void setVersion(final int version) {
-		this.version = version;
 	}
 
 	public Set<Author> getAuthors() {
