@@ -137,5 +137,7 @@
 		<module>JPQLUpdate</module>
 		<module>2ndLevelCache</module>
 		<module>CriteriaStandardFunction</module>
+		<module>NativeQuery</module>
+		<module>NamedNativeQuery</module>
 	</modules>
 </project>
