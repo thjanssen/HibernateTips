@@ -1,7 +1,5 @@
 package org.thoughts.on.java.model;
 
-import java.io.Serializable;
-
 import javax.persistence.Cacheable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,9 +10,7 @@ import javax.persistence.Version;
 
 @Entity
 @Cacheable
-public class Author implements Serializable {
-
-	private static final long serialVersionUID = 1L;
+public class Author {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
