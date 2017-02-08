@@ -136,5 +136,6 @@
 		<module>JPQLDelete</module>
 		<module>JPQLUpdate</module>
 		<module>2ndLevelCache</module>
+		<module>CriteriaStandardFunction</module>
 	</modules>
 </project>
