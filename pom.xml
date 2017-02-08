@@ -28,11 +28,6 @@
 			</dependency>
 			<dependency>
 				<groupId>org.hibernate</groupId>
-				<artifactId>hibernate-java8</artifactId>
-				<version>${hibernate.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.hibernate</groupId>
 				<artifactId>hibernate-jpamodelgen</artifactId>
 				<version>${hibernate.version}</version>
 			</dependency>
@@ -140,5 +135,6 @@
 		<module>NativeQuery</module>
 		<module>NamedNativeQuery</module>
 		<module>DateAndTime</module>
+		<module>ResultsAsStreams</module>
 	</modules>
 </project>
