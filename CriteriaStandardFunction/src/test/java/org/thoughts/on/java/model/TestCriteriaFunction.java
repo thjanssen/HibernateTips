@@ -16,7 +16,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TestCriteriaConstructor {
+public class TestCriteriaFunction {
 
 	Logger log = Logger.getLogger(this.getClass().getName());
 
@@ -33,8 +33,8 @@ public class TestCriteriaConstructor {
 	}
 
 	@Test
-	public void callCountFunction() {
-		log.info("... callCountFunction ...");
+	public void callSizeFunction() {
+		log.info("... callSizeFunction ...");
 
 		EntityManager em = emf.createEntityManager();
 		em.getTransaction().begin();
@@ -49,7 +49,7 @@ public class TestCriteriaConstructor {
 		List<Tuple> results = q.getResultList();
 		
 		for (Tuple r :  results) {
-			log.info(r.get(0) + " wrote " +  r.get(1));
+			log.info(r.get(0) + " wrote " +  r.get(1) + " books.");
 		}
 
 		em.getTransaction().commit();
