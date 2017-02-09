@@ -38,6 +38,7 @@ public class TestGeneratedColumn {
 		a.setLastName("Lastname");
 		em.persist(a);
 		em.flush();
+		
 		a.setFirstName("Changed Firstname");
 		em.flush();
 		Assert.assertNotNull(a.getLastUpdate());
