@@ -137,5 +137,27 @@
 		<module>DateAndTime</module>
 		<module>ResultsAsStreams</module>
 		<module>JpqlStandardFunction</module>
+		<module>JPQLAdHocQuery</module>
+		<module>JPQLNamedQuery</module>
+		<module>JPQLConstructorExpression</module>
+		<module>JPQLScalarValues</module>
+		<module>MapBasicAttributes</module>
+		<module>MapUtilDate</module>
+		<module>InheritanceTablePerClass</module>
+		<module>InheritanceJoined</module>
+		<module>InheritanceMappedSuperclass</module>
+		<module>InheritanceSingleTable</module>
+		<module>HibernateJoinUnassociatedEntities</module>
+		<module>CustomEnumerationsMapping</module>
+		<module>AttributeConverterForDateAndTime</module>
+		<module>HibernateNaturalId</module>
+		<module>HibernateMultipleId</module>
+		<module>DerivedPrimaryKey</module>
+		<module>AssociationsWithAttributes</module>
+		<module>AssociationBidirectionalManyToOne</module>
+		<module>AssociationUnidirectionalManyToOne</module>
+		<module>AssociationUnidirectionalOneToMany</module>
+		<module>AssociationBidirectionalManyToMany</module>
+		<module>AssociationUnidirectionalManyToMany</module>
 	</modules>
 </project>
