@@ -1,0 +1,13 @@
+INSERT INTO book (id, publishingdate, title, version) VALUES (1, '2017-04-04', 'Hibernate Tips 1', 0);
+INSERT INTO book (id, publishingdate, title, version) VALUES (2, '2017-04-04', 'Hibernate Tips 2', 0);
+INSERT INTO book (id, publishingdate, title, version) VALUES (3, '2017-04-04', 'Hibernate Tips 3', 0);
+INSERT INTO book (id, publishingdate, title, version) VALUES (4, '2017-04-04', 'Hibernate Tips 4', 0);
+INSERT INTO book (id, publishingdate, title, version) VALUES (5, '2017-04-04', 'Hibernate Tips 5', 0);
+INSERT INTO book (id, publishingdate, title, version) VALUES (6, '2017-04-04', 'Hibernate Tips 6', 0);
+INSERT INTO book (id, publishingdate, title, version) VALUES (7, '2017-04-04', 'Hibernate Tips 7', 0);
+INSERT INTO book (id, publishingdate, title, version) VALUES (8, '2017-04-04', 'Hibernate Tips 8', 0);
+INSERT INTO book (id, publishingdate, title, version) VALUES (9, '2017-04-04', 'Hibernate Tips 9', 0);
+INSERT INTO book (id, publishingdate, title, version) VALUES (10, '2017-04-04', 'Hibernate Tips 10', 0);
+INSERT INTO book (id, publishingdate, title, version) VALUES (11, '2017-04-04', 'Hibernate Tips 11', 0);
+INSERT INTO book (id, publishingdate, title, version) VALUES (12, '2017-04-04', 'Hibernate Tips 12', 0);
+INSERT INTO book (id, publishingdate, title, version) VALUES (13, '2017-04-04', 'Hibernate Tips 13', 0);

@@ -159,5 +159,12 @@
 		<module>AssociationUnidirectionalOneToMany</module>
 		<module>AssociationBidirectionalManyToMany</module>
 		<module>AssociationUnidirectionalManyToMany</module>
+		<module>AssociationBidirectionalOneToOne</module>
+		<module>AssociationUnidirectionalOneToOne</module>
+		<module>PrimaryKeyTableStrategy</module>
+		<module>PrimaryKey</module>
+		<module>PrimaryKeyUUID</module>
+		<module>CriteriaQueryPagination</module>
+		<module>HibernateBootstrapping</module>
 	</modules>
 </project>

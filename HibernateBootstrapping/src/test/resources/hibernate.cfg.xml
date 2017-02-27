@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">org.postgresql.Driver</property>
+		<property name="connection.url">jdbc:postgresql://localhost:5432/recipes</property>
+		<property name="connection.username">postgres</property>
+		<property name="connection.password">postgres</property>
+		<property name="connection.pool_size">1</property>
+
+		<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		
+		<property name="hbm2ddl.auto">create</property>		
+	</session-factory>
+</hibernate-configuration>
