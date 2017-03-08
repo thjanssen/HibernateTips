@@ -9,7 +9,6 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.thoughts.on.java.model.Review.ReviewId;
 
 public class TestDerivedPrimaryKey {
 
