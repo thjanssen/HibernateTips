@@ -36,9 +36,10 @@ public class TestJoinFetch {
 		Author a = em.createQuery("SELECT a FROM Author a WHERE id = 1", Author.class).getSingleResult();
 		
 		em.getTransaction().commit();
-		em.close();
+		
 		
 		log.info(a.getFirstName()+" "+a.getLastName()+" wrote "+a.getBooks().size()+" books.");
+		em.close();
 	}
 	
 	@Test

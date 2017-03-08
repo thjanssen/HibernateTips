@@ -43,7 +43,7 @@ public class Book {
 		      name="BookAuthor",
 		      joinColumns={@JoinColumn(name="bookId", referencedColumnName="id")},
 		      inverseJoinColumns={@JoinColumn(name="authorId", referencedColumnName="id")})
-	@OrderBy(value = "lastName ASC")
+	@OrderBy(value = "lastName")
 	private Set<Author> authors = new HashSet<Author>();
 	
 	public Long getId() {

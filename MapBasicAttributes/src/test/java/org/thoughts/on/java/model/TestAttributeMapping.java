@@ -34,8 +34,7 @@ public class TestAttributeMapping {
 
 		Author a = new Author();
 		a.setFirstName("John");
-		a.setLastName("Doe");
-		
+		a.setLastName("Doe");	
 		em.persist(a);
 		
 		em.getTransaction().commit();

@@ -33,8 +33,8 @@ public class TestPrePersist {
 		em.getTransaction().begin();
 
 		Author a = new Author();
-		a.setFirstName("first name");
-		a.setLastName("last name");
+		a.setFirstName("Thorben");
+		a.setLastName("Janssen");
 		em.persist(a);
 		
 		em.getTransaction().commit();

@@ -20,12 +20,10 @@ public class TestHibernateBootstrapping {
 	@Before
 	public void init() {
 		ServiceRegistry standardRegistry = new StandardServiceRegistryBuilder()
-													.configure()
-													.build();
+				.configure().build();
 		sessionFactory = new MetadataSources(standardRegistry)
-								.addAnnotatedClass(Author.class)
-								.buildMetadata()
-								.buildSessionFactory();
+				.addAnnotatedClass(Author.class).buildMetadata()
+				.buildSessionFactory();
 		session = sessionFactory.openSession();
 	}
 
@@ -44,7 +42,7 @@ public class TestHibernateBootstrapping {
 		a.setFirstName("Thorben");
 		a.setLastName("Janssen");
 		session.persist(a);
-		
+
 		session.getTransaction().commit();
 	}
 }

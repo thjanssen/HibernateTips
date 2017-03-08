@@ -53,7 +53,17 @@ public class TestViewEntity {
 		em.getTransaction().begin();
 
 		BookView bv = em.find(BookView.class, 1L);
-		bv.setTitle("updated");
+	    log.info(bv);
+	    bv.setTitle("updated");
+	     
+	    em.getTransaction().commit();
+	    em.close();
+	 
+	    em = emf.createEntityManager();
+		em.getTransaction().begin();
+		
+	    BookView bookupdate = em.find(BookView.class, 1L);
+	    log.info(bookupdate);  
 		
 		em.getTransaction().commit();
 		em.close();

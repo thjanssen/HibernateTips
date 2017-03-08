@@ -39,9 +39,6 @@ public class TestTableStrategy {
 		log.info("Persist new Author entity.");
 		em.persist(a);
 		
-		log.info("Call flush");
-		em.flush();
-		
 		em.getTransaction().commit();
 		em.close();
 	}

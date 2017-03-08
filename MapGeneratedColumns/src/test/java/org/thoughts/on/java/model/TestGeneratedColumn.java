@@ -34,8 +34,8 @@ public class TestGeneratedColumn {
 		em.getTransaction().begin();
 
 		Author a = new Author();
-		a.setFirstName("Firstname");
-		a.setLastName("Lastname");
+		a.setFirstName("Thorben");
+		a.setLastName("Janssen");
 		em.persist(a);
 		em.flush();
 		

@@ -18,7 +18,7 @@ import javax.persistence.Version;
 
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-public abstract class Publication {
+public class Publication {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

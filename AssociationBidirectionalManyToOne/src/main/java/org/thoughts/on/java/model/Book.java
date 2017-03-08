@@ -51,6 +51,11 @@ public class Book {
 		this.reviews = reviews;
 	}
 	
+	public void addReview(Review review) {
+		this.reviews.add(review);
+		review.setBook(this);
+	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj) {

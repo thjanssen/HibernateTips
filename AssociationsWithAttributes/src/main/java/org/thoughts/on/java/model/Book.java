@@ -1,12 +1,14 @@
 package org.thoughts.on.java.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Version;
 
 @Entity
@@ -22,9 +24,8 @@ public class Book {
 
 	private String title;
 
-	@ManyToOne
-	@JoinColumn(name="publisherid")
-	private Publisher publisher;
+	@OneToMany(mappedBy = "book")
+	private List<BookPublisher> publishers = new ArrayList<BookPublisher>();
 	
 	public Long getId() {
 		return this.id;
@@ -42,12 +43,12 @@ public class Book {
 		this.title = title;
 	}
 
-	public Publisher getPublisher() {
-		return this.publisher;
+	public List<BookPublisher> getPublishers() {
+		return publishers;
 	}
 
-	public void setPublisher(final Publisher publisher) {
-		this.publisher = publisher;
+	public void setPublishers(List<BookPublisher> publishers) {
+		this.publishers = publishers;
 	}
 
 	@Override

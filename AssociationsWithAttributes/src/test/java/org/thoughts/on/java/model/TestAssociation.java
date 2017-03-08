@@ -36,7 +36,7 @@ public class TestAssociation {
 		Publisher p = em.find(Publisher.class, 1L);
 		
 		BookPublisher bp = new BookPublisher();
-		bp.setId(new BookPublisher.BookPublisherId());
+		bp.setId(new BookPublisherId());
 		bp.setBook(b);
 		bp.setPublisher(p);
 		bp.setFormat(Format.PAPERBACK);

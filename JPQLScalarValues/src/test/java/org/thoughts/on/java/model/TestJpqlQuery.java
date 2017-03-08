@@ -3,7 +3,7 @@ package org.thoughts.on.java.model;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 import org.apache.log4j.Logger;
 import org.junit.After;
@@ -34,9 +34,9 @@ public class TestJpqlQuery {
 		EntityManager em = emf.createEntityManager();
 		em.getTransaction().begin();
 
-		Query q = em.createQuery("SELECT b.title, b.publisher.name FROM Book b WHERE b.id = :id");
+		TypedQuery<Object[]> q = em.createQuery("SELECT b.title, b.publisher.name FROM Book b WHERE b.id = :id", Object[].class);
 		q.setParameter("id", 1L);
-		Object[] result = (Object[]) q.getSingleResult();
+		Object[] result = q.getSingleResult();
 		
 		Assert.assertTrue(result[0] instanceof String);
 		Assert.assertEquals("Hibernate Tips", result[0]);
