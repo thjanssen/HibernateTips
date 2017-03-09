@@ -68,10 +68,17 @@ public class Author {
 		this.dateOfBirth = dateOfBirth;
 	}
 
+	public int getCalculatedAge() {
+		log.info("Calculate age");
+		return Period.between(dateOfBirth, LocalDate.now()).getYears();
+	}
+	
 	public int getAge() {
 		if (this.age == null) {
 			log.info("Calculate age");
 			this.age = Period.between(dateOfBirth, LocalDate.now()).getYears();
+		} else {
+			log.info("Age got already calculated. Return cached value.");
 		}
 
 		return age;

@@ -27,8 +27,8 @@ public class TestTransient {
 	}
 
 	@Test
-	public void emFind() {
-		log.info("... emFind ...");
+	public void emFindAge() {
+		log.info("... emFindAge ...");
 
 		EntityManager em = emf.createEntityManager();
 		em.getTransaction().begin();
@@ -36,6 +36,21 @@ public class TestTransient {
 		Author a = em.find(Author.class, 1L);
 		Assert.assertEquals(43, a.getAge());
 		log.info(a.getFirstName() + " " + a.getLastName() + " is " + a.getAge() + " years old.");
+		
+		em.getTransaction().commit();
+		em.close();
+	}
+	
+	@Test
+	public void emFindCalculatedAge() {
+		log.info("... emFindCalculatedAge ...");
+
+		EntityManager em = emf.createEntityManager();
+		em.getTransaction().begin();
+
+		Author a = em.find(Author.class, 1L);
+		Assert.assertEquals(43, a.getCalculatedAge());
+		log.info(a.getFirstName() + " " + a.getLastName() + " is " + a.getCalculatedAge() + " years old.");
 		
 		em.getTransaction().commit();
 		em.close();

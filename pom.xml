@@ -166,5 +166,6 @@
 		<module>PrimaryKeyUUID</module>
 		<module>CriteriaQueryPagination</module>
 		<module>HibernateBootstrapping</module>
+		<module>SpringBootBootstrapping</module>
 	</modules>
 </project>

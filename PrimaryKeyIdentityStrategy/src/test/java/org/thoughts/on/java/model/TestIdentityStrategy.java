@@ -36,11 +36,9 @@ public class TestIdentityStrategy {
 		a.setFirstName("Thorben");
 		a.setLastName("Janssen");
 		
-		log.info("Persist new Author entity.");
+		log.info("Before persist");
 		em.persist(a);
-		
-		log.info("Call flush");
-		em.flush();
+		log.info("After persist");
 		
 		em.getTransaction().commit();
 		em.close();
