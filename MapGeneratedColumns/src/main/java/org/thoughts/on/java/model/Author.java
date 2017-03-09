@@ -83,14 +83,11 @@ public class Author {
 	public int hashCode() {
 		return 31;
 	}
-	
+
 	@Override
 	public String toString() {
-		String result = getClass().getSimpleName() + " ";
-		if (firstName != null && !firstName.trim().isEmpty())
-			result += "firstName: " + firstName;
-		if (lastName != null && !lastName.trim().isEmpty())
-			result += ", lastName: " + lastName;
-		return result;
-	}	
+		return "Author [id=" + id + ", version=" + version + ", firstName="
+				+ firstName + ", lastName=" + lastName + ", lastUpdate="
+				+ lastUpdate + "]";
+	}
 }
