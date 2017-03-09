@@ -14,7 +14,7 @@ import org.thoughts.on.java.model.Author;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class TestSpringBootstrapping {
+public class SpringBootstrappingTest {
 
 	Logger log = Logger.getLogger(this.getClass().getName());
 
