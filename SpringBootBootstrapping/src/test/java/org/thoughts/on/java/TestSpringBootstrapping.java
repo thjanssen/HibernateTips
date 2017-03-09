@@ -1,4 +1,4 @@
-package org.thoughts.on.java.demo;
+package org.thoughts.on.java;
 
 import javax.persistence.EntityManager;
 
