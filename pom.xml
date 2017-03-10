@@ -167,5 +167,6 @@
 		<module>CriteriaQueryPagination</module>
 		<module>HibernateBootstrapping</module>
 		<module>SpringBootBootstrapping</module>
+		<module>JPABootstrapping</module>
 	</modules>
 </project>
