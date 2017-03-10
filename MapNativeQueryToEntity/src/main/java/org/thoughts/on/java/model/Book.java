@@ -26,7 +26,7 @@ import javax.persistence.Version;
 		entities = @EntityResult(
 						entityClass = Book.class, 
 						fields = {
-								@FieldResult(name = "id", column = "id"),
+								@FieldResult(name = "id", column = "bookId"),
 								@FieldResult(name = "version", column = "version"),
 								@FieldResult(name = "title", column = "title"),
 								@FieldResult(name = "publishingDate", column = "publishingDate"),

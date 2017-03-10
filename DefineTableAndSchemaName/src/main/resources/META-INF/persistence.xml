@@ -9,7 +9,6 @@
 
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
-			<property name="hibernate.generate_statistics" value="true" />
 			<property name="hibernate.format_sql" value="true" />
 
 			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
