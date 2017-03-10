@@ -13,9 +13,11 @@ import javax.persistence.TemporalType;
 import javax.persistence.Version;
 
 @Entity
-@NamedNativeQuery(name="selectBook", query="SELECT * FROM book b WHERE id = ?", resultClass = Book.class)
+@NamedNativeQuery(name=Book.QUERY_SELECT_BY_ID, query="SELECT * FROM book b WHERE id = ?", resultClass = Book.class)
 public class Book {
 
+	public static final String QUERY_SELECT_BY_ID = "Book.selectById";
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id", updatable = false, nullable = false)

@@ -34,7 +34,7 @@ public class TestNamedNativeQuery {
 		EntityManager em = emf.createEntityManager();
 		em.getTransaction().begin();
 
-		Query q = em.createNamedQuery("selectBook");
+		Query q = em.createNamedQuery(Book.QUERY_SELECT_BY_ID);
 		q.setParameter(0, 1);
 		Book b = (Book) q.getSingleResult();
 		Assert.assertTrue(b instanceof Book);
