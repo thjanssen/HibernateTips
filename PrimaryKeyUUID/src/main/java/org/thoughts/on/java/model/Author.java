@@ -8,17 +8,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Version;
 
-import org.hibernate.annotations.GenericGenerator;
-
 @Entity
 public class Author {
 
 	@Id
-	@GeneratedValue(generator = "UUID")
-	@GenericGenerator(
-		name = "UUID",
-		strategy = "org.hibernate.id.UUIDGenerator"
-	)
+	@GeneratedValue
 	@Column(name = "id", updatable = false, nullable = false)
 	private UUID id;
 	

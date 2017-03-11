@@ -19,7 +19,7 @@ public class TestJPABootstrapping {
 		EntityManager em = emf.createEntityManager();
 		em.getTransaction().begin();
 
-		Book b = em.find(Book.class, 1L);
+		em.find(Book.class, 1L);
 
 		em.getTransaction().commit();
 		em.close();

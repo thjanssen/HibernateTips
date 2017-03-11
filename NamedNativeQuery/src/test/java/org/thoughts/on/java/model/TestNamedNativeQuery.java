@@ -35,7 +35,7 @@ public class TestNamedNativeQuery {
 		em.getTransaction().begin();
 
 		Query q = em.createNamedQuery(Book.QUERY_SELECT_BY_ID);
-		q.setParameter(0, 1);
+		q.setParameter(1, 1);
 		Book b = (Book) q.getSingleResult();
 		Assert.assertTrue(b instanceof Book);
 		Assert.assertEquals(new Long(1), ((Book)b).getId());
