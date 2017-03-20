@@ -6,7 +6,6 @@ public class AuthorValue {
 	private String lastName;
 
 	public AuthorValue(String firstName, String lastName) {
-		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}

@@ -35,10 +35,16 @@ public class TestJoinFetch {
 
 		Author a = em.createQuery("SELECT a FROM Author a WHERE id = 1", Author.class).getSingleResult();
 		
+		log.info("Commit transaction and close Session");
 		em.getTransaction().commit();
 		em.close();
 		
-		log.info(a.getFirstName()+" "+a.getLastName()+" wrote "+a.getBooks().size()+" books.");
+		try {
+			log.info(a.getFirstName()+" "+a.getLastName()+" wrote "+a.getBooks().size()+" books.");
+		} catch (Exception e) {
+			log.error(e);
+			throw e;
+		}
 	}
 	
 	@Test
@@ -50,6 +56,7 @@ public class TestJoinFetch {
 
 		Author a = em.createQuery("SELECT a FROM Author a JOIN FETCH a.books WHERE a.id = 1", Author.class).getSingleResult();
 		
+		log.info("Commit transaction and close Session");
 		em.getTransaction().commit();
 		em.close();
 		

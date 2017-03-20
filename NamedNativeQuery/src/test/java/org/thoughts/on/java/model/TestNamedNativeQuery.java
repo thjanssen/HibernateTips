@@ -35,10 +35,10 @@ public class TestNamedNativeQuery {
 		em.getTransaction().begin();
 
 		Query q = em.createNamedQuery(Book.QUERY_SELECT_BY_ID);
-		q.setParameter(1, 1);
+		q.setParameter(1, 100);
 		Book b = (Book) q.getSingleResult();
 		Assert.assertTrue(b instanceof Book);
-		Assert.assertEquals(new Long(1), ((Book)b).getId());
+		Assert.assertEquals(new Long(100), ((Book)b).getId());
 		
 		em.getTransaction().commit();
 		em.close();

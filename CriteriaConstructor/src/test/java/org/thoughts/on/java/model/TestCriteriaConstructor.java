@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
@@ -42,7 +43,8 @@ public class TestCriteriaConstructor {
 		Root<Author> root = q.from(Author.class);
 		q.select(cb.construct(AuthorValue.class, root.get(Author_.firstName), root.get(Author_.lastName)));
 
-		List<AuthorValue> authors = em.createQuery(q).getResultList();
+		TypedQuery<AuthorValue> query = em.createQuery(q);
+		List<AuthorValue> authors = query.getResultList();
 
 		for (AuthorValue author : authors) {
 			log.info(author.getFirstName() + " "

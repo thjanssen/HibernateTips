@@ -6,6 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Tuple;
+import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
@@ -44,7 +45,8 @@ public class TestCriteriaTuples {
 		q.multiselect(author.get(Author_.firstName).alias("firstName"), 
 						author.get(Author_.lastName).alias("lastName"));
 
-		List<Tuple> authorNames = em.createQuery(q).getResultList();
+		TypedQuery<Tuple> query = em.createQuery(q);
+		List<Tuple> authorNames = query.getResultList();
 
 		for (Tuple authorName : authorNames) {
 			log.info(authorName.get("firstName") + " "

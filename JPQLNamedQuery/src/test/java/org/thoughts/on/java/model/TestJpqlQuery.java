@@ -28,8 +28,8 @@ public class TestJpqlQuery {
 	}
 
 	@Test
-	public void adHocJpqlQuery() {
-		log.info("... adHocJpqlQuery ...");
+	public void namedJpqlQuery() {
+		log.info("... namedJpqlQuery ...");
 
 		EntityManager em = emf.createEntityManager();
 		em.getTransaction().begin();
